@@ -145,7 +145,7 @@ document.querySelector("#getStyle").addEventListener("click", function (e) {
   e.preventDefault();
   document.getElementById("textarea").innerHTML = "";
   for (let [key, value] of Object.entries(style)) {
-    document.getElementById("textarea").innerHTML += `${key}: ${value},\n`;
+    document.getElementById("textarea").innerHTML += `${key}: ${value};\n`;
   }
 });
 
