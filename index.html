@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      #getStyle {
+        width: 300px;
+        height: 40px;
+        background-color: crimson;
+        color: whitesmoke;
+        outline: none;
+        border: 0px;
+        border-radius: 5px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-align: left;
+        text-decoration: underline;
+        box-shadow: 10px 10px 8px #888888;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">Select Style</div>
+            <div class="card-body">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Width & Height
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col">
+                          <label class="form-label">Width</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Width"
+                            id="width"
+                          />
+                        </div>
+                        <div class="col">
+                          <label class="form-label">Height</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Height"
+                            id="height"
+                          />
+                        </div>
+
+                        <div class="col">
+                          <label class="form-label">Padding</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Padding"
+                            value="0"
+                            id="padding"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        Background & Colors
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="row">
+                          <div class="col">
+                            <label for="background" class="form-label"
+                              >Background</label
+                            >
+                            <input
+                              type="color"
+                              class="form-control form-control-color"
+                              id="background"
+                              value="#563d7c"
+                              title="Choose your color"
+                            />
+                          </div>
+                          <div class="col">
+                            <label for="color" class="form-label">Color </label>
+                            <input
+                              type="color"
+                              class="form-control form-control-color"
+                              id="color"
+                              value="#563d7c"
+                              title="Choose your color"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        Border & Outline
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="outline"
+                            checked
+                          />
+                          <label class="form-check-label" for="outline">
+                            Button Outline
+                          </label>
+                        </div>
+
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="borderStyle"
+                          />
+                          <label class="form-check-label" for="borderStyle">
+                            Border Width & Color
+                          </label>
+                        </div>
+
+                        <div
+                          class="row mt-3"
+                          style="display: none"
+                          id="border_style"
+                        >
+                          <div class="col-md-6">
+                            <label for="borderWidth" class="form-label"
+                              >Border Width</label
+                            >
+                            <input
+                              type="number"
+                              placeholder="Border Width"
+                              value="1"
+                              id="borderWidth"
+                              class="form-control"
+                            />
+                          </div>
+                          <div class="col-md-5">
+                            <label for="borderColor" class="form-label"
+                              >Border Color</label
+                            >
+                            <input
+                              type="color"
+                              class="form-control form-control-color"
+                              id="borderColor"
+                              value="#563d7c"
+                              title="Choose your color"
+                            />
+                          </div>
+                        </div>
+                        <label for="borderRadius" class="form-label"
+                          >Border Radius</label
+                        >
+                        <input
+                          type="number"
+                          placeholder="Border Radius"
+                          id="borderRadius"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Text Style
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="row">
+                        <div class="col">
+                          <label for="fontSize" class="form-label"
+                            >Font Size</label
+                          >
+                          <input
+                            type="number"
+                            placeholder="Font Size"
+                            id="fontSize"
+                            class="form-control"
+                          />
+                        </div>
+                        <div class="col">
+                          <label for="fontWeight" class="form-label"
+                            >Font Weight</label
+                          >
+                          <input
+                            type="number"
+                            placeholder="Font Weight"
+                            id="fontWeight"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="col">
+                          <label for="textAlign" class="form-label"
+                            >Text Align</label
+                          >
+                          <select id="textAlign" class="form-select">
+                            <option value="left">Left</option>
+                            <option value="center">Center</option>
+                            <option value="Right">Right</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="col">
+                          <label for="textTransform" class="form-label"
+                            >Transform</label
+                          >
+                          <select id="textTransform" class="form-select">
+                            <option value="uppercase">Upper Case</option>
+                            <option value="lowercase">Lower Case</option>
+                            <option value="capitalize">Capitalize</option>
+                          </select>
+                        </div>
+                        <div class="col">
+                          <label for="letterSpacing" class="form-label"
+                            >Letter Spacing</label
+                          >
+                          <input
+                            type="number"
+                            placeholder="Spacing"
+                            id="letterSpacing"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="row mt-2">
+                        <div class="col">
+                          <label for="textDecoration" class="form-label"
+                            >Text Decoration</label
+                          >
+                          <select id="textDecoration" class="form-select">
+                            <option value="underline">Underline</option>
+                            <option value="overline">Overline</option>
+                            <option value="line-through">Line Through</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="mt-3" id="getStyle">Get Style</button>
+        </div>
+        <div class="col-md-8">
+          <h1 class="text-primary text-center">Button Builder</h1>
+          <label class="form-label">Select an Element</label>
+          <select
+            name="element-selector"
+            id="element-selector"
+            class="form-select"
+          >
+            <option value="" selected disabled>
+              Select an Option to Style Element
+            </option>
+            <option value="button">Button</option>
+            <option value="input">Input</option>
+          </select>
+
+          <div class="mt-5 text-center" id="output"></div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >CSS Generated</label
+            >
+            <textarea class="form-control" id="textarea" rows="3"> </textarea>
+          </div>
+          <button class="btn btn-primary" id="copy">Copy Style</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
